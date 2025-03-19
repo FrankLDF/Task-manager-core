@@ -1,0 +1,59 @@
+### endpoint para resgistrar un nuevo usuario
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+    {
+  "name":"Juana Maria",
+  "email":"juan@ejempl0.com",
+  "password":"123456"
+}
+
+### endpoint para loguear un usuario
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+    {
+ "email":"juan@ejempl0.com",
+  "password":"123456"
+  }
+
+### endpoint para registrar tarea
+POST http://localhost:3000/api/tasks/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNmUxZmY2LTYwYWYtNDNkZi05ODBkLWZhMGJiNzdjNzUyZiIsImlhdCI6MTc0MTQwNDc2NSwiZXhwIjoxNzQxNDkxMTY1fQ.e6gfFoaakIz9ER_gokOuDQuHiEpr5g6iq0xXD_WyS2k
+
+{
+  "title":"Ajustar el backend", 
+  "description":"Poner el api del proyecto a funcionar", 
+  "status":"PENDING", 
+  "priority":"LOW"
+}
+
+### endpoint para obtener todas las tareas
+GET http://localhost:3000/api/tasks/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhlMDM2Y2Q3LTIxOTktNDA3YS04NWE3LTk4OTI1M2MzNjg2ZCIsImlhdCI6MTc0MTM5Mzc3MSwiZXhwIjoxNzQxNDgwMTcxfQ.Fb1_LplDyGFiBtSuLNKLwaC654h9X9Z7imommvDh5Ag
+
+
+### endpoint para obtener una tarea
+GET http://localhost:3000/api/tasks/558bfad8-8539-44ba-b134-bce7ce43b2aa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhlMDM2Y2Q3LTIxOTktNDA3YS04NWE3LTk4OTI1M2MzNjg2ZCIsImlhdCI6MTc0MTM5Mzc3MSwiZXhwIjoxNzQxNDgwMTcxfQ.Fb1_LplDyGFiBtSuLNKLwaC654h9X9Z7imommvDh5Ag
+
+### endpoint para actualizar una tarea
+PUT  http://localhost:3000/api/tasks/558bfad8-8539-44ba-b134-bce7ce43b2aa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhlMDM2Y2Q3LTIxOTktNDA3YS04NWE3LTk4OTI1M2MzNjg2ZCIsImlhdCI6MTc0MTM5Mzc3MSwiZXhwIjoxNzQxNDgwMTcxfQ.Fb1_LplDyGFiBtSuLNKLwaC654h9X9Z7imommvDh5Ag
+
+{
+  "title":"Terminar el backend el dia de hoy", 
+  "description":"terminar el api del proyecto ", 
+  "status":"PENDING", 
+  "priority":"LOW" 
+}
+
+### endpoint para eliminar una tarea
+DELETE http://localhost:3000/api/tasks/558bfad8-8539-44ba-b134-bce7ce43b2aa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhlMDM2Y2Q3LTIxOTktNDA3YS04NWE3LTk4OTI1M2MzNjg2ZCIsImlhdCI6MTc0MTM5Mzc3MSwiZXhwIjoxNzQxNDgwMTcxfQ.Fb1_LplDyGFiBtSuLNKLwaC654h9X9Z7imommvDh5Ag
+
