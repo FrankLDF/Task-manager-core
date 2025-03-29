@@ -68,7 +68,7 @@ export const login = async (req, res) => {
     const { email, password } = req.body
 
     // Buscar usuario por email
-    console.log('Intentando login con:', email, password)
+
     const user = await prisma.users.findUnique({ where: { email } })
     if (!user) {
       return res

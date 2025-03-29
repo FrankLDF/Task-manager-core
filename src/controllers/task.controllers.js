@@ -69,22 +69,19 @@ const createTask = async (req, res) => {
 // Actualizar una tarea con validación y verificación de existencia
 const updateTask = async (req, res) => {
   try {
-    console.log('running')
     const { title, description, status, priority } = req.body
     const { id } = req.params
-    console.log('running0')
 
     // Verificar si el ID es válido
     if (!id) {
       return res.status(400).json({ error: 'ID de tarea no proporcionado' })
     }
 
-    console.log('running1')
     // Buscar la tarea antes de actualizarla
     const existingTask = await prisma.tasks.findUnique({
       where: { id },
     })
-    console.log('running2')
+
     if (!existingTask) {
       return res.status(404).json({ error: 'Tarea no encontrada' })
     }
